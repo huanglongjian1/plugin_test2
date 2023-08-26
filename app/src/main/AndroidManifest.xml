@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:name=".TestApp"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Plugin_test2"
+        tools:targetApi="31">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity android:name=".one.SubActivity" />
+        <activity
+            android:name=".two.Two_Activity"
+            android:exported="true">
+
+        </activity>
+        <activity android:name=".two.ProxyActivity" />
+        <activity
+            android:name=".three.Three_Activity"
+            android:exported="true">
+
+        </activity>
+        <activity android:name=".three.Proxy_Activity_02" />
+        <activity
+            android:name=".four.Four_Activity"
+            android:exported="true"></activity>
+        <activity android:name=".four.Proxy_Activity_04" />
+        <activity
+            android:name=".five.Five_Activity"
+            android:exported="true">
+
+        </activity>
+        <activity android:name=".five.ProxyActivity" />
+        <activity
+            android:name=".six.Six_Activity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".Senven.Senven_Activity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".eight.Eight_Activity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".night.Night_Activity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".ten.Ten_Activity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".ten.Ten_Activity_02"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".eleven.Eleven_Activity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name="com.android.plugin_test3.one.One_Activity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name="com.android.plugin_test3.two.Two_Activity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.android.plugin_test3.three.Three_Activity"
+            android:exported="true">
+
+        </activity>
+    </application>
+
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+</manifest>

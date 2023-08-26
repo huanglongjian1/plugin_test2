@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="testRunner" value="GRADLE" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/mylibrary" />
+            <option value="$PROJECT_DIR$/plugin" />
+            <option value="$PROJECT_DIR$/plugin_test1" />
+            <option value="$PROJECT_DIR$/plugin_test2" />
+            <option value="$PROJECT_DIR$/plugin_test3" />
+            <option value="$PROJECT_DIR$/plugin_test4" />
+            <option value="$PROJECT_DIR$/plugin_test5" />
+            <option value="$PROJECT_DIR$/plugin_test6" />
+            <option value="$PROJECT_DIR$/plugin_test7" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

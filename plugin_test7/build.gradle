@@ -1,0 +1,57 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.android.plugin_test7'
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "com.android.plugin_test7"
+        minSdk 26
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+}
+//删除dynamic.jar包任务
+task clearJar(type: Delete) {
+    delete 'libs/patch_2.jar'
+}
+//打包任务
+task makeJar(type: org.gradle.api.tasks.bundling.Jar) {
+    //指定生成的jar名
+    baseName 'patch_2'
+    //从哪里打包class文件
+    from('build/intermediates/javac/debug/classes/com/android/plugin_test3/three/')
+    //打包到jar后的目录结构
+    into('com/android/plugin_test3/three')
+    //去掉不需要打包的目录和文件
+    exclude('test/', 'BuildConfig.class', 'R.class', 'FileUtils.class')
+    //去掉R$开头的文件
+    exclude { it.name.startsWith('R$'); }
+}
+makeJar.dependsOn(clearJar, build)

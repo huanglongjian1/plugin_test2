@@ -1,0 +1,25 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "plugin_test2"
+include ':app'
+include ':plugin_test1'
+include ':plugin'
+include ':plugin_test2'
+include ':plugin_test3'
+include ':plugin_test4'
+include ':plugin_test5'
+include ':plugin_test6'
+include ':plugin_test7'
+include ':mylibrary'

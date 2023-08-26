@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">plugin_test7</string>
+    <string name="test_string">我是plugin_test7的资源</string>
+</resources>
